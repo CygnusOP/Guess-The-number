@@ -11,29 +11,11 @@ guess_limit = 10
 while guess != number:
     guess_count += 1
 
-    if guess_count == 1:
-        print("You have 9 chances left")
-    elif guess_count == 2 :
-        print("You have 8 chances left")
-    elif guess_count == 3:
-        print("You have 7 chances left")
-    elif guess_count == 4:
-        print("You have 6 chances left")
-    elif guess_count == 5:
-        print("You have 5 chances left")
-    elif guess_count == 6:
-        print("You have 4 chances left")
-    elif guess_count == 7:
-        print("You have 3 chances left")
-    elif guess_count == 8:
-        print("You have 2 chances left")
-    elif guess_count == 9:
-        print("You have 1 chances left")
+    if guess_count < guess_limit:
+        print("You have (%d) chances left" % (guess_limit - guess_count))
     else :
         print("You are out of chances. Good Luck next time!")
         quit()
-
-
 
     if guess < number:
         print("You have to guess something higher.")
